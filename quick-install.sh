@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# dhyntoh Premium VPN Quick Installer
+# dhyntoh Complete VPN Quick Installer
 
-echo "🚀 dhyntoh Premium VPN Quick Installer"
-echo "📦 Installing all components..."
+echo "🚀 dhyntoh Complete VPN Quick Installer"
+echo "🎯 ALL FEATURES WORKING: Create, Renew, Delete, List"
 
 # Download and run installer
-curl -sSL https://raw.githubusercontent.com/dhyntoh/script/main/install.sh | bash
+curl -sSL -o /tmp/complete-install.sh https://raw.githubusercontent.com/dhyntoh/script/main/install.sh
+chmod +x /tmp/complete-install.sh
+/tmp/complete-install.sh
 
-# Start menu after installation
-echo "🎉 Installation complete! Starting menu..."
-menu
+# Download menu
+curl -sSL -o /usr/local/bin/menu https://raw.githubusercontent.com/dhyntoh/script/main/menu.sh
+chmod +x /usr/local/bin/menu
+
+echo "🎉 Complete installation finished!"
+echo "💡 Run 'menu' to start using ALL features"
